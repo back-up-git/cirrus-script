@@ -1,10 +1,10 @@
 # Normal build steps
 . build/envsetup.sh
-lunch rom_lavender-userdebug
+lunch aospa_raphael-userdebug
 
 # export variable here
-export TZ=Asia/Kolkata
+export TZ=Asia/Delhi
 
 compile_plox () {
-make bacon -j$(nproc --all)
+./rom-build.sh raphael -t userdebug -v beta -j$(nproc --all)
 }
